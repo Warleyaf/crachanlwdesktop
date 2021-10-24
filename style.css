@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(0, 4%, 10%);
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(./images/Mobile.svg) no-repeat center/cover; /*aqui eu disse, não repetir, centralizar e preencha a minha imagem toda*/
+  width: 100vw; /*Aqui é,vw pegue a largura total da tela e preencha toda*/
+  min-height: 812px;
+  height: 100vh;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
+}
+
+@media (min-width: 720px) {
+  
+  main {
+    width: 100vw;
+    height: 100vh;
+    min-height: 820px;
+   background: url(./images/Desktop2.svg) no-repeat center/cover;
+    
+  }
+ 
+  .container {
+    /*background: url(./images/mascara.svg) no-repeat center/cover;*/
+    max-width: 22.35rem;
+    height: 33.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .avatar {
+    position: relative;
+  }
+  .avatar > img {
+     margin-top: 1.8rem; 
+  }
+
+  .avatar span {
+    position: absolute;
+    top: 0.5rem;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
+
+  #userBio {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+}
+ 
